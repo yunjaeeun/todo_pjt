@@ -1,10 +1,18 @@
 package todo.pjt.back.memo.model.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import todo.pjt.back.user.model.entity.User;
 
 @Entity
 @Table(name = "tbl_memo")
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Memo {
 
     @Id
