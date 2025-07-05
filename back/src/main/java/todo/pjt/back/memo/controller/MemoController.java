@@ -27,7 +27,7 @@ public class MemoController {
         return ResponseEntity.status(HttpStatus.CREATED).body(res);
     }
 
-    @GetMapping
+    @GetMapping("/{memoId}")
     public ResponseEntity<ResFindMemo> findMemo(
             @PathVariable int memoId
     ) {
@@ -43,7 +43,7 @@ public class MemoController {
         return ResponseEntity.ok(res);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{memoId}")
     public ResponseEntity<String> deleteMemo(
             @PathVariable int memoId
     ) {
